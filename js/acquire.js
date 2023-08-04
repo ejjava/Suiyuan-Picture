@@ -1,4 +1,4 @@
-<script>
+
     var imageUrls = getRandomImageUrls(); // 从 randomImages.js 获取随机图片URL数组
     var imgElements = document.getElementsByClassName("random-image");
 
@@ -10,4 +10,3 @@
     for (var i = 0; i < imgElements.length; i++) {
         imgElements[i].src = getRandomImageUrl();
     }
-</script>
