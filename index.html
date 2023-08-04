@@ -11,7 +11,7 @@
     <title>RND PIC:一款纯JS的随机图片系统</title>
     <meta name="keywords" content=图片,二次元,RND PIC,自制接口,接口,随机,随机图片>
     <meta name="description" content="DZY's Blog:随心所欲的分享！">
-    
+    <script src="https://rndpic.netlify.app/js/acquire.js"></script> 
    <script src="https://rndpic.netlify.app/js/randomImages.js"></script> 
   </head>
   <body>
@@ -46,19 +46,7 @@
   <hr>
   <p class="mb-0">如果你在其他语言上也实现调用，请联系QQ914933408，非常非常感谢🙏<br>更新时间2023.8.4<br>图数:15</p>
 </div>
-<script>
-    var imageUrls = getRandomImageUrls(); // 从 randomImages.js 获取随机图片URL数组
-    var imgElements = document.getElementsByClassName("random-image");
 
-    function getRandomImageUrl() {
-        var randomIndex = Math.floor(Math.random() * imageUrls.length);
-        return imageUrls[randomIndex];
-    }
-
-    for (var i = 0; i < imgElements.length; i++) {
-        imgElements[i].src = getRandomImageUrl();
-    }
-</script>
 
     <!-- JavaScript 文件是可选的。从以下两种建议中选择一个即可！ -->
 
