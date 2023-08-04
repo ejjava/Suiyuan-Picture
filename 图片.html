@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>随机图片</title>
+    <script src="tp.js"></script>
+</head>
+<body>
+    <img id="random-image" alt="随机图片">
+
+    <script>
+        var imgElement = document.getElementById("random-image");
+
+        function getRandomImageUrl() {
+            var imageUrls = getRandomImageUrls();
+            var randomIndex = Math.floor(Math.random() * imageUrls.length);
+            return imageUrls[randomIndex];
+        }
+
+        imgElement.src = getRandomImageUrl();
+    </script>
+</body>
+</html>

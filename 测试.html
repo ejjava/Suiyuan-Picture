@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>随机跳转示例</title>
+    <script>
+        // 定义跳转函数
+        function randomRedirect() {
+            // 定义跳转网址列表
+            var urls = [
+                "https://www.example.com/page1",
+                "https://www.example.com/page2",
+                "https://www.example.com/page3"
+            ];
+            
+            // 随机选择一个跳转网址
+            var randomIndex = Math.floor(Math.random() * urls.length);
+            var randomUrl = urls[randomIndex];
+            
+            // 执行页面跳转
+            window.location.href = randomUrl;
+        }
+        
+        // 在页面加载完成后调用跳转函数
+        window.onload = randomRedirect;
+    </script>
+</head>
+<body>
+    <h1>随机跳转示例</h1>
+    <p>正在随机跳转...</p>
+</body>
+</html>

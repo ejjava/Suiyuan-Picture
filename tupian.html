@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Image Redirect</title>
+    <script src="https://rndpic.netlify.app/js/randomImages.js"></script>
+    <script>
+        // 获取随机图片链接
+        function getRandomImageUrl() {
+            var imageUrls = getRandomImageUrls();
+            var randomIndex = Math.floor(Math.random() * imageUrls.length);
+            return imageUrls[randomIndex];
+        }
+
+        // 在页面加载时跳转到随机图片
+        window.onload = function() {
+            var randomImageUrl = getRandomImageUrl();
+            window.location.href = randomImageUrl;
+        };
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

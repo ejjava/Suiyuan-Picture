@@ -24,7 +24,40 @@
     <h5 class="card-title">RND PIC</h5>
     <br>
     <p class="card-text">本程序由js制作的一款静态随机图片接口<br>无需注册 只需复制粘贴</p>
-    <a href="https://share.weiyun.com/AboZg0dc" class="btn btn-primary">开始使用</a>
+<br>
+<h5>第一步</h5>
+<code>
+&lt;script src="https://rndpic.netlify.app/js/randomImages.js"&gt;&lt;/script&gt;
+</code><br>放在（之间）<br><code>&lt;head&gt;&lt;/head&gt;</code>
+<h5>第二步</h5>
+<code>
+&lt;script&gt;
+    var imageUrls = getRandomImageUrls(); // 从 randomImages.js 获取随机图片URL数组
+    var imgElements = document.getElementsByClassName("random-image");
+
+    function getRandomImageUrl() {
+        var randomIndex = Math.floor(Math.random() * imageUrls.length);
+        return imageUrls[randomIndex];
+    }
+
+    for (var i = 0; i &lt; imgElements.length; i++) {
+        imgElements[i].src = getRandomImageUrl();
+    }
+&lt;/script&gt;
+</code>
+<br>
+放在（之间）
+<br>
+<code>
+    &lt;body&gt;&lt;/body&gt;
+</code>
+<br>
+
+<h5>第三步</h5>
+<code>
+    &lt;img class="random-image" id="random-image" alt="随机图片"&gt;
+</code>
+<br>直接引用就好了
   </div>
 
 </div>
