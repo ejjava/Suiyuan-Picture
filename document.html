@@ -8,7 +8,9 @@
     <!-- Bootstrap 的 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+      <title>RND PIC:一款纯JS的随机图片系统</title>
+    <meta name="keywords" content=图片,二次元,RND PIC,自制接口,接口,随机,随机图片>
+    <meta name="description" content="DZY's Blog:随心所欲的分享！">
      <script src="https://rndpic.netlify.app/js/randomImages.js"></script> 
   </head>
   <body>
@@ -26,42 +28,33 @@
     <p class="card-text">本程序由js制作的一款静态随机图片接口<br>无需注册 只需复制粘贴</p>
 <br>
 <h5>第一步</h5>
+
 <code>
-&lt;script src="https://rndpic.netlify.app/js/randomImages.js"&gt;&lt;/script&gt;
-</code><br>放在（之间）<br><code>&lt;head&gt;&lt;/head&gt;</code>
+&lt;!-- RND PIC随机图片 --&gt;
+  <br>  &lt;script src="https://rndpic.netlify.app/js/random.js"&gt;&lt;/script&gt;<br>
+    &lt;script src="https://rndpic.netlify.app/js/acquire.js"&gt;&lt;/script&gt;
+    &lt;!-- RND PIC随机图片 --&gt;
+</code>
+<br>
+
+
+<code>
+ 放在  &lt;/body&gt;前（必须是最后一个）
+</code>
+<br>
+<br>
 <h5>第二步</h5>
-<code>
-&lt;script&gt;
-    var imageUrls = getRandomImageUrls(); // 从 randomImages.js 获取随机图片URL数组
-    var imgElements = document.getElementsByClassName("random-image");
-
-    function getRandomImageUrl() {
-        var randomIndex = Math.floor(Math.random() * imageUrls.length);
-        return imageUrls[randomIndex];
-    }
-
-    for (var i = 0; i &lt; imgElements.length; i++) {
-        imgElements[i].src = getRandomImageUrl();
-    }
-&lt;/script&gt;
-</code>
-<br>
-放在（之间）
-<br>
-<code>
-    &lt;body&gt;&lt;/body&gt;
-</code>
-<br>
-
-<h5>第三步</h5>
 <code>
     &lt;img class="random-image" id="random-image" alt="随机图片"&gt;
 </code>
-<br>直接引用就好了
+<br>
+<code>
+    直接引用
+</code>
   </div>
 
 </div>
-<a href="./" class=" m-2 w-100 p-2 btn btn-outline-dark" role="button" aria-pressed="true">效果</a>
+<a href="./" class=" m-2 w-100 p-2 btn btn-outline-dark" role="button" aria-pressed="true">刷新</a>
 
 <div class="card m-2">
   <div class="card-body">
